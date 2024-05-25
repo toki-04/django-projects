@@ -8,33 +8,213 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-  </head>
-  <body>
-    {% include "home/navbar.html" %}
-    <section class="hero is-primary is-medium">
-      <div class="hero-body is-flex is-justify-content-center is-align-content-center">
-          <div>
-            <h1 class="title is-1">Welcome To My Blog</h1>
-            <p class="subtitle is-small mt-4" style="max-width:550px;">My name is Kyle Pagayon. I am currently 22 years old right now. My hobbies are programming and electronics and I also like tofu and bean sprouts. I created this blog site to put all of the projects I made such websites, games, electronics. I wan't to become a computer engineer I hope i could graduate and have my dream job. </p>
-            <button class="button is-link">Get Started</button>
-          </div>
-            <div class="ml-4">
-            <figure class="image">
-            <img class="is-rounded"
-              style="width:250px;height:250px;"
-              src="{% static 'home/images/cool-arona.jpg' %}" />
 
-            </figure>
-          </div>
+    <style>
+      .personal-info-table td{
+        background-color: hsl(var(--bulma-message-h),var(--bulma-message-s),var(--bulma-message-background-l));
+
+      }
+
+    </style>
+  </head>
+
+  <body
+    class="mx-auto px-4"
+    style="max-width:1100px;">
+
+  {% include "home/navbar.html" %}
+  <section class="message is-info">
+    <div class="message-header">
+      <p>Welcome To My Blog</p>
+    </div>
+
+    <div class="message-body">
+      <div class="is-flex is-justify-content-center is-align-content-center">
+        <div>
+          <h1 class="title is-2">My Name is <span style="text-decoration:underline;color:#4697E8;">Kyle Pagayon</span></h1>
+            <p class="subtitle is-small mt-4" style="max-width:550px;">I am currently 22 years old right now. My hobbies are programming and electronics and I also like tofu and bean sprouts. I created this blog site to put all of the projects I made such websites, games, electronics. I wan't to become a computer engineer I hope i could graduate and have my dream job. </p>
+            <button class="button is-link">Get Started</button>
 
         </div>
 
-
+        <div class="ml-4">
+          <figure class="image">
+            <img class="is-rounded"
+              style="width:250px;height:250px;"
+              src="{% static 'home/images/cool-arona.jpg' %}" />
+          </figure>
+        </div>
       </div>
+    </div>
+  </section>
 
+
+  <div class="columns">
+
+    <div class="column">
+    <section class="message is-success">
+        <div class="message-header">
+          <p>About Me!</p>
+        </div>
+        <div class="message-body subtitle is-5">
+          <p>
+I enjoy solving complex problems and learning new skills. I am passionate
+about creating high-quality code that follows best practices and industry
+standards. I am always looking for new challenges and opportunities to
+grow as a developer.
+          </p>
+        </div>
+    </section>
+
+    <div class="columns">
+    <section class="column message is-primary">
+        <div class="message-header">
+          <p>Personal Info!</p>
+        </div>
+        <div class="message-body subtitle is-6">
+          <table class="table personal-info-table mx-auto">
+            <tbody class="">
+    
+              <tr class="has-text-primary">
+                <td>Birthday</td>
+                <td>:</td>
+                <td>March 25, 200</td>
+              </tr>
+
+              <tr>
+                <td>Age</td>
+                <td>:</td>
+                <td>22</td>
+              </tr>
+
+              <tr>
+                <td>Height</td>
+                <td>:</td>
+                <td>167cm</td>
+              </tr>
+
+              <tr>
+                <td>Religion</td>
+                <td>:</td>
+                <td>Catholic</td>
+              </tr>
+
+              <tr>
+                <td>Sex</td>
+                <td>:</td>
+                <td>Male</td>
+              </tr>
+
+              <tr>
+                <td>Language</td>
+                <td>:</td>
+                <td>English, Tagalog</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+    </section>
+
+    <section class="column message is-danger">
+        <div class="message-header">
+          <p>Socials!</p>
+        </div>
+        <div class="message-body subtitle is-6">
+          <ul class="">
+            <li class="is-flex">
+                <img src="{% static 'home/images/gmail.png' %}" style="width:32px;height:32px;" />
+                 <a 
+                    target="_blank"
+                    href="https://mail.google.com"
+                    class="mx-2 mt-1">kylepagayon58@gmail.com</a>
+            </li>
+
+            <li class="is-flex mt-2">
+                <img src="{% static 'home/images/facebook.png' %}" style="width:32px;height:32px;" />
+                 <a 
+                    target="_blank"
+                    href="https://www.facebook.com/kylepagayon.pagayon"
+                    class="mx-2">https://www.facebook.com/kylepagayon.pagayon</a>
+            </li>
+
+            <li class="is-flex mt-2">
+                <img src="{% static 'home/images/github.png' %}" style="width:32px;height:32px;" />
+                 <a
+                    target="_blank"
+                    href="https://github.com/toki-04"
+                    class="mx-2 mt-1">https://github.com/toki-04</a>
+            </li>
+        </div>
+    </section>
+
+    </div>
+
+
+    </div>
+
+    <section class="column is-one-third message is-warning">
+        <div class="message-header">
+          <p>Technologies I Use!</p>
+        </div>
+        <div class="message-body">
+          <ul>
+            <li class="is-flex">
+              
+              <img src="{% static 'home/images/html.png' %}" style="width:32px;height:32px;" />
+              <p 
+                class="mx-2">
+                HTML (HyperText Markup Language) 
+                is used to structure a web page.
+              </p>
+            </li>
+
+            <li class="is-flex mt-4">
+              
+              <img src="{% static 'home/images/css-3.png' %}" style="width:32px;height:32px;" />
+
+              <p 
+                class="mx-2">
+              CSS (Cascading Style Sheets) is used to style and layout web pages
+              </p>
+            </li>
+
+            <li class="is-flex mt-4">
+              
+              <img src="{% static 'home/images/js.png' %}" style="width:32px;height:32px;" />
+              <p 
+                class="mx-2">
+                JS (JavaScript) is used to make web pages interactive
+              </p>
+            </li>
+
+            <li class="is-flex mt-4">
+              
+              <img src="{% static 'home/images/python.png' %}" style="width:32px;height:32px;" />
+              <p 
+                class="mx-2">
+                Django is a high-level Python web framework 
+              </p>
+            </li>
+
+            <li class="is-flex gap-4 mt-4">
+              <img src="{% static 'home/images/sql-server.png' %}" style="width:32px;height:32px;" />
+              <p 
+                class="mx-2">
+                Structured query language (SQL) is a standard language for database creation and manipulation
+              </p>
+            </li>
+          </ul>
+          
+        </div>
     </section>
 
 
-  
+
+  </div>
+
+
+
   </body>
 </html>
