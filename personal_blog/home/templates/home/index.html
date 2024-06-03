@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    {% load static %}
+    <link href="{% static 'home/style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="welcome">Welcome to my portfolio</h1>
+      <div class="hero">
+        <div class="hero-header">Introduction</div>
+        <div class="hero-body">
+          <div>
+            <h1 class="title">My Name is <span>Kyle Pagayon</span></h1>
+            <p class="">I am currently 22 years old right now. My hobbies are programming and electronics and I also like tofu and bean sprouts. I created this blog site to put all of the projects I made such websites, games, electronics. I wan't to become a computer engineer I hope i could graduate and have my dream job. </p>
+          </div>
+          <img class="profile" src="{% static 'home/images/cool-arona.jpg' %}">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="info-grid">
+      <div class="about-me">
+        <div class="header">About Me!</div>
+        <div class="body">
+          <p>I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.</p>
+        </div>
+      </div>
+      <div class="personal-info">
+        <div class="header">Personal Information</div>
+        <div class="body">
+            <ul>
+              <li>Name: Kyle Pagayon</li>
+            </ul>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container-header">
+        <h1>My Projects</h1>
+      </div>
+
+      <div class="container-body">
+        <div class="grid-container">
+          <div class="grid-1">
+            <img class="profile" src="{% static 'home/images/cool-arona.jpg' %}">
+
+            <h3 class="title">Socials</h3>
+            <div class="social-icon-container">
+              <img src="{% static 'home/images/gmail.png' %}">
+              <span>Gmail</span>
+            </div>
+
+            <div class="social-icon-container">
+              <img src="{% static 'home/images/facebook.png' %}">
+              <span>Facebook</span>
+            </div>
+
+            <div class="social-icon-container">
+              <img src="{% static 'home/images/github.png' %}">
+              <span>GitHub</span>
+            </div>
+
+            <h3 class="title">Technologies</h3>
+            <div class="technologies-container">
+              <div class="technologies">
+                <img src="{% static 'home/images/html.png' %}" >
+                <span>HTML</span>
+              </div>
+              <div class="technologies">
+                <img src="{% static 'home/images/css-3.png' %}" >
+                <span>CSS</span>
+              </div>
+              <div class="technologies">
+                <img src="{% static 'home/images/js.png' %}" >
+                <span>JS</span>
+              </div>
+              <div class="technologies">
+                <img src="{% static 'home/images/python.png' %}" >
+                <span>PYTHON</span>
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+          <div class="grid-2">
+            <div class="breadcrumbs">
+              <div class="active">
+                <img src="{% static 'home/images/world-wide-web.png' %}" >
+                <span>Web Development</span>
+              </div>
+
+              <div>
+                <img src="{% static 'home/images/python-black.png' %}" >
+                <span>Python</span>
+              </div>
+
+              <div>
+                <img src="{% static 'home/images/cpu.png' %}" >
+                <span>IoT</span>
+              </div>
+            </div>
+            <hr>
+
+          <div class="projects">
+            <nav>
+              <h2 class="title">Web Development</h2>
+              <div class="project-nav">
+                  <a class="active" href="#">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+              </div>
+            </nav>
+
+            <div class="project-container">
+
+              <div class="project-card">
+                  <img src="{% static 'home/images/projects/todo-app.png' %}">
+                  <div class="title">
+                    <h3>Todo App</h3>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <img src="{% static 'home/images/projects/collage-maker.png' %}">
+                  <div class="title">
+                    <h3>Collage Maker</h3>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <img src="{% static 'home/images/projects/connect-four.png' %}">
+                  <div class="title">
+                    <h3>Connect Four</h3>
+                  </div>
+                </div>
+
+              <div class="project-card">
+                  <img src="{% static 'home/images/projects/qr-code-generator.png' %}">
+                  <div class="title">
+                    <h3>Qr Code Generator</h3>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <img src="{% static 'home/images/projects/momotalk.png' %}">
+                  <div class="title">
+                    <h3>Chat App</h3>
+                  </div>
+                </div>
+              <div class="project-card">
+                    <img src="{% static 'home/images/projects/streamlit.png' %}">
+                  <div class="title">
+                    <h3>(ML) Iris Flower</h3>
+                  </div>
+                </div>
+
+
+            </div>
+          </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+  
+  </body>
+</html>
