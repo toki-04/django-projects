@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+}
+
+:root {
+  --primary: #6F4E37;
+  --secondary: #A67B5B;
+  --black: #1E1E1E;
+  --gray: #555555;
+}
+
+body {
+  color: var(--black);
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid var(--primary);
+}
+
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+nav .left .icon {
+  width: 32px;
+  height: 32px;
+
+}
+
+nav .left a {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+nav .right a {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+nav .right .login {
+  background-color: var(--primary);
+  padding: 4px 24px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+nav .right .signup {
+  color: var(--black);
+  margin-left: 4px;
+
+}
+
+section {
+  margin: 32px;
+}
+
+section .title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+}
+
+.container-grid .filter-container .filter .select {
+  display: flex;
+  gap: 8px;
+  margin-left: 24px;
+}
+
+
+.container-grid .filter-container .type .select {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.container-grid .filter-container .filter .select button {
+  padding: 4px 8px;
+  border: 1px solid var(--secondary);
+  border-radius: 4px;
+  background: none;
+  font-size: 1.1rem;
+}
+
+
+.container-grid .filter-container .filter .select button:hover {
+  background-color: var(--secondary);
+}
+
+
+.container-grid .filter-container .filter .select .active {
+  background-color: var(--secondary);
+}
+
+.container-grid .items .filter-container {
+  padding: 4px 8px;
+  border: 1px solid var(--black);
+  width: 250px;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.container-grid .items #filter {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.items .item-container {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.items .item-container .item {
+  text-align: center;
+  margin-left: 8px;
+  border-bottom: 1px solid var(--secondary);
+}
