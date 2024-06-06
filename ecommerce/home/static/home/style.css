@@ -98,6 +98,7 @@ section .title {
   border-radius: 4px;
   background: none;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 
@@ -135,4 +136,9 @@ section .title {
   text-align: center;
   margin-left: 8px;
   border-bottom: 1px solid var(--secondary);
+}
+
+
+.items .item-container .item img {
+  width: 100%;
 }

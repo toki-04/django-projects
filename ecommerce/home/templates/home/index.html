@@ -38,8 +38,9 @@
         <div class="filter">
           <h2>Roast</h2>
           <div class="select">
-            <button>Light</button>
-            <button class="active">Medium</button>
+            <button class="active">ALL</button>
+            <button onclick=filter_roast("light")>Light</button>
+            <button>Medium</button>
             <button>Dark</button>
           </div>
         </div>
@@ -47,7 +48,8 @@
         <div class="filter">
           <h2>Size</h2>
           <div class="select">
-            <button class="active">12oz</button>
+            <button class="active">ALL</button>
+            <button>12oz</button>
             <button>16oz</button>
             <button>32oz</button>
           </div>
@@ -56,10 +58,11 @@
         <div class="filter type">
           <h2>Type</h2>
           <div class="select">
+            <button class="active">ALL</button>
             <button>Decaffeinated</button>
             <button>Easy-late</button>
             <button>Flavored</button>
-            <button class="active">Ground</button>
+            <button>Ground</button>
             <button>Organic</button>
             <button>Reserved</button>
             <button>Seasonal</button>
@@ -80,9 +83,9 @@
         <div class="item-container">
           {% for item in product %}
             <div class="item">
-              <img src="{% static 'home/images/test_product.png' %}">
+              <img src={{item.image.url}}>
               <h3>{{item.name}}</h3>
-              <h3>{{item.price}}</h3>
+              <h3>₱{{item.price}}</h3>
             </div>
           {% endfor %}
         </div>
@@ -92,5 +95,6 @@
   </section>
 
 </body>
+  <script src="{% static 'home/script.js' %}"></script>
 
 </html>

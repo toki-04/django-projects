@@ -20,7 +20,20 @@ def product_list(request, format=None):
 
 
 def index(request):
+    filter_roast = ""
+    filter_size = ""
+    filter_coffee_type = ""
+
     product = Product.objects.all()
+
+    if filter_roast:
+        product = product.filter(roast=filter_roast)
+
+    if filter_size:
+        product = product.filter(size=filter_size)
+
+    if filter_coffee_type:
+        product = product.filter(coffee_type=filter_coffee_type)
 
     context = {
         "product": product

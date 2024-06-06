@@ -29,11 +29,11 @@ COFFEE_TYPE_CHOICE = (
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to="images/")
     roast = models.CharField(choices=ROAST_CHOICES, max_length=20)
     size = models.CharField(choices=SIZE_CHOICE, max_length=3)
     coffee_type = models.CharField(choices=COFFEE_TYPE_CHOICE, max_length=20)
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload_to="images/")
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
