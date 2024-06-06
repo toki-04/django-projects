@@ -37,36 +37,36 @@
 
         <div class="filter">
           <h2>Roast</h2>
-          <div class="select">
-            <button class="active">ALL</button>
-            <button onclick=filter_roast("light")>Light</button>
-            <button>Medium</button>
-            <button>Dark</button>
+          <div class="select" id="roast-container">
+            <button id="roast-all" onclick=filter_roast(0) class="active">ALL</button>
+            <button id="roast-light" onclick=filter_roast(1)>Light</button>
+            <button id="roast-medium" onclick=filter_roast(2)>Medium</button>
+            <button id="roast-dark" onclick=filter_roast(3)>Dark</button>
           </div>
         </div>
 
         <div class="filter">
           <h2>Size</h2>
-          <div class="select">
-            <button class="active">ALL</button>
-            <button>12oz</button>
-            <button>16oz</button>
-            <button>32oz</button>
+          <div class="select" id="size-container">
+            <button onclick=filter_size(0) class="active">ALL</button>
+            <button onclick=filter_size(1)>12oz</button>
+            <button onclick=filter_size(2)>16oz</button>
+            <button onclick=filter_size(3)>32oz</button>
           </div>
         </div>
 
         <div class="filter type">
           <h2>Type</h2>
-          <div class="select">
-            <button class="active">ALL</button>
-            <button>Decaffeinated</button>
-            <button>Easy-late</button>
-            <button>Flavored</button>
-            <button>Ground</button>
-            <button>Organic</button>
-            <button>Reserved</button>
-            <button>Seasonal</button>
-            <button>Whole Bean</button>
+          <div class="select" id="filter-coffee-container">
+            <button onclick=filter_coffee_type(0) class="active">ALL</button>
+            <button onclick=filter_coffee_type(1)>Decaffeinated</button>
+            <button onclick=filter_coffee_type(2)>Easy-late</button>
+            <button onclick=filter_coffee_type(3)>Flavored</button>
+            <button  onclick=filter_coffee_type(4)>Ground</button>
+            <button onclick=filter_coffee_type(5)>Organic</button>
+            <button onclick=filter_coffee_type(6)>Reserved</button>
+            <button onclick=filter_coffee_type(7)>Seasonal</button>
+            <button onclick=filter_coffee_type(8)>Whole Bean</button>
           </div>
         </div>
 
@@ -80,14 +80,8 @@
           </select>
         </div>
 
-        <div class="item-container">
-          {% for item in product %}
-            <div class="item">
-              <img src={{item.image.url}}>
-              <h3>{{item.name}}</h3>
-              <h3>₱{{item.price}}</h3>
-            </div>
-          {% endfor %}
+        <div id="item-container" class="item-container">
+
         </div>
 
       </div>

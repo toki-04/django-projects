@@ -20,20 +20,23 @@ def product_list(request, format=None):
 
 
 def index(request):
-    filter_roast = ""
-    filter_size = ""
-    filter_coffee_type = ""
+    # 1 - light, 2 - medium, 3 - dark
+    filter_roast = 2
+
+    # 1 - 12, 2 - 16, 3 - 32
+    filter_size = 2
+
+    # 1 - decaf, 2 - easy-late, 3 - ground, 4 - organic
+    # 5 - reserved, 6 - seasonal, 7 - whole-bean
+    filter_coffee_type = 2
 
     product = Product.objects.all()
-
     if filter_roast:
-        product = product.filter(roast=filter_roast)
-
+        product = product.filter(roast__id=filter_roast)
     if filter_size:
-        product = product.filter(size=filter_size)
-
+        product = product.filter(size__id=filter_size)
     if filter_coffee_type:
-        product = product.filter(coffee_type=filter_coffee_type)
+        product = product.filter(coffee_type__id=filter_coffee_type)
 
     context = {
         "product": product

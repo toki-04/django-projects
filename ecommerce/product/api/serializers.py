@@ -14,6 +14,7 @@ class ProductSerializer(serializers.ModelSerializer):
             "size",
             "coffee_type",
             "price",
+            "image",
             "created",
         )
 
