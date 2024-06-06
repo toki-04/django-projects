@@ -136,9 +136,136 @@ section .title {
   text-align: center;
   margin-left: 8px;
   border-bottom: 1px solid var(--secondary);
+  text-decoration: none;
+  color: var(--black);
 }
 
 
 .items .item-container .item img {
   width: 100%;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.product-container img {
+  max-width: 500px;
+}
+
+.product-container .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-container .right .name-container {
+  display: flex;
+  gap: 8px;
+}
+
+
+.product-container .name-container img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.product-container .name {
+  font-size: 2rem;
+}
+
+.product-container .desc {
+  margin-top: 16px;
+  max-width: 500px;
+}
+
+.product-container .size-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container .size-container div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+
+.product-container .size-container div button {
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid var(--black);
+}
+
+
+.product-container .size-container div button:hover {
+  background-color: var(--primary);
+}
+
+
+.product-container .size-container div .active {
+  background-color: var(--primary);
+}
+
+.product-container .quantity-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container .quantity-container div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+
+.product-container .quantity-container img {
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--black);
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+
+.product-container .quantity-container img:hover {
+  background-color: var(--primary);
+}
+
+.product-container .price-container {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-container .price-container .price {
+  font-size: 1.8rem;
+}
+
+
+.product-container .btn-container button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 8px;
+
+}
+
+
+.product-container .btn-container .cart {
+  background-color: var(--secondary);
+}
+
+.product-container .btn-container .buy {
+  background-color: var(--primary);
 }

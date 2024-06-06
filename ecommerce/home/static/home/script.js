@@ -15,15 +15,17 @@ async function fetch_product(url){
 function create_product(product_list){
   item_container.innerHTML = ""
   for (let i=0; i<product_list.length; i++){
-    const item = document.createElement("div");
+    const item = document.createElement("a");
     const image = document.createElement("img");
     const name = document.createElement("h3");
     const price = document.createElement("h3");
 
     item.setAttribute("class", "item")
+    item.setAttribute("href", `http://127.0.0.1:8000/product/`+product_list[i].id)
+
     image.setAttribute("src", product_list[i].image)
     name.innerText = product_list[i].name
-    price.innerText = product_list[i].price
+    price.innerText = "$ "+product_list[i].price
 
     item.appendChild(image)
     item.appendChild(name)
