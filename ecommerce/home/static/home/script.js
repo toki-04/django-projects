@@ -6,6 +6,7 @@ let coffee_type_id = 0
 let api_url = "http://127.0.0.1:8000/api/product/"
 
 
+
 async function fetch_product(url){
   const response = await fetch(url);
   return await response.json();
@@ -119,10 +120,26 @@ function filtered_products(roast_id, size_id, coffee_type_id){
 
 }
 
-
 get_all_products().then(data => {
   create_product(data)
 })
+
+function filter_options(){
+  const filter_options = document.getElementById("filter-options")
+  const value = filter_options.value
+  const FEATURED = "featured"
+  const HIGH_TO_LOW = "high-to-low"
+  const LOW_TO_HIGH = "low-to-high"
+
+  if (value == FEATURED){
+    get_all_products().then(data => {
+      create_product(data)
+    })
+  }
+
+}
+
+
 
 
 

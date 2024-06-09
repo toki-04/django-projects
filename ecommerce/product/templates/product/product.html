@@ -23,10 +23,11 @@
 
       <div class="size-container">
         <h1>Size:</h1>
-        <div>
-          <button>120z</button>
-          <button>160z</button>
-          <button class="active">320z</button>
+        <div id="size-btn-container">
+          {% for size in product.size.all %}
+            <button>{{size}}oz</button>
+          {% endfor %}
+
         </div>
       </div>
 
@@ -34,24 +35,29 @@
       <div class="quantity-container">
         <h1>Quantity:</h1>
         <div>
-          <img src="{% static 'home/images/minus.png' %}">
-          <h1>1</h1>
-          <img src="{% static 'home/images/plus.png' %}">
+          <img onclick='minus()' src="{% static 'home/images/minus.png' %}">
+           <h1 id="quantity-counter">1</h1>
+          <img onclick='add()' src="{% static 'home/images/plus.png' %}">
         </div>
       </div>
 
       <div class="price-container">
         <h1>Price:</h1>
-        <h1 class="price">$ {{product.price}}</h1>
+        <div class="price">
+          <span>$</span>
+          <h1 id="price" > {{product.price}}</h1>
+        </div>
       </div>
 
     </div>
     <div class="btn-container">
-
-      <button class="cart">Add to Cart</button>
       <button class="buy">Buy Now</button>
+      <button class="cart">Add to Cart</button>
     </div>
 
   </div>
 </section>
+
+<script src="{% static 'product/script.js' %}"></script>
 {% endblock content %}
+

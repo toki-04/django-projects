@@ -51,9 +51,11 @@
 
       <div class="items">
         <div class="filter-container">
-          <label for="filter">Sory By - </label>
-          <select id="filter" name="filter">
-            <option>Featured</option>
+          <label for="filter-options">Sory By - </label>
+          <select onchange='filter_options()' id="filter-options" name="filter">
+            <option value="featured">Featured</option>
+            <option value="high-to-low">Price - High to Low</option>
+            <option value="low-to-high">Price - Low to High</option>
           </select>
         </div>
 
@@ -65,5 +67,6 @@
     </div>
   </section>
 
+<script src="{% static 'home/script.js' %}"></script>
 {% endblock content %}
 
