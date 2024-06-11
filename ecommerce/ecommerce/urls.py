@@ -25,6 +25,7 @@ urlpatterns = [
     path("api/", include("ecommerce.api.urls")),
     path("", include("home.urls")),
     path("product/", include("product.urls")),
+    path("auth/", include("authentication.urls")),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
