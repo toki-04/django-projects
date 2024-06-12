@@ -4,10 +4,12 @@
 {% block content %}
 
 <section>
-  <form class="auth-form">
+  <form class="auth-form" method="POST">
     <h1 class="title">Cawpii</h1>
-    <input type="text" placeholder="email">
-    <input type="password" placeholder="password">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
     <button class="submit" type="submit">Login</button>
 
     <span>Don't have an account yet click <a href="{% url 'authentication:signup' %}">here</a></span>
