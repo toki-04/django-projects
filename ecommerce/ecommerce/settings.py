@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "home",
     "product",
     "authentication",
+    "cart",
     "rest_framework",
 
 ]
