@@ -26,6 +26,8 @@ function create_product(product_list){
 
     image.setAttribute("src", product_list[i].image)
     name.innerText = product_list[i].name
+
+    price.setAttribute("class", "price")
     price.innerText = "$ "+product_list[i].price
 
     item.appendChild(image)
@@ -138,7 +140,23 @@ function filter_options(){
   }
 
 }
+const roast_filter = document.getElementById("roast-filter")
+roast_filter.addEventListener("change", function(){
+  roast_id = parseInt(roast_filter.value);
+  filtered_products(roast_id, size_id, coffee_type_id)
+})
 
+const size_filter = document.getElementById("size-filter")
+size_filter.addEventListener("change", function(){
+  size_id= parseInt(size_filter.value);
+  filtered_products(roast_id, size_id, coffee_type_id)
+})
+
+const coffee_type_filter = document.getElementById("coffee-type-filter")
+coffee_type_filter.addEventListener("change", function(){
+  coffee_type_id = parseInt(coffee_type_filter.value);
+  filtered_products(roast_id, size_id, coffee_type_id)
+})
 
 
 

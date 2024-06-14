@@ -19,14 +19,15 @@
       <img class="icon" src="{% static 'home/images/coffee-bean.png' %}">
         <a class="" href={% url 'home:index' %}>Cawpii</a>
 
-      {% if request.user.is_authenticated %}
-        <p>{{ request.user.username }}</p>
-      {% endif %}
+
     </div>
 
     <div class="right">
-        <a href="#">
+        <a href="#" class="user">
           <img src="{% static 'home/images/user.png' %}" >
+          {% if request.user.is_authenticated %}
+            <p>{{ request.user.username }}</p>
+          {% endif %}
         </a>
 
         <a href="#">

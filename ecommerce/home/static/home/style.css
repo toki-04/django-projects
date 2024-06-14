@@ -52,6 +52,14 @@ nav .right {
   margin-right: 8px;
 }
 
+nav .right .user {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  color: var(--black);
+  text-decoration: none;
+}
+
 
 section {
   margin: 32px;
@@ -65,8 +73,8 @@ section .title {
 }
 
 .container-grid {
-  display: grid;
-  grid-template-columns: 400px 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .container-grid .filter-container .filter .select {
@@ -102,6 +110,9 @@ section .title {
 }
 
 .container-grid .items .filter-container {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
   margin-top: 32px;
   padding: 16px;
   border: 1px solid var(--black);
@@ -109,10 +120,18 @@ section .title {
   margin-left: auto;
 }
 
-.container-grid .items #filter-options {
+
+.container-grid .items .filter-container .filter label {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.container-grid .items .filter-container .filter select {
   background: none;
   border: none;
   font-size: 1.1rem;
+  padding: 4px;
+  font-weight: 500;
 }
 
 .items .item-container {
@@ -128,6 +147,11 @@ section .title {
   border-bottom: 1px solid var(--secondary);
   text-decoration: none;
   color: var(--black);
+}
+
+
+.items .item-container .item .price {
+  margin: 8px 0;
 }
 
 

@@ -10,53 +10,54 @@
     </div>
 
     <div class="container-grid">
-      <div class="filter-container">
-
-        <div class="filter">
-          <h2>Roast</h2>
-          <div class="select" id="roast-container">
-            <button onclick=filter_roast(0) class="active">ALL</button>
-            <button onclick=filter_roast(1)>Light</button>
-            <button onclick=filter_roast(2)>Medium</button>
-            <button onclick=filter_roast(3)>Dark</button>
-          </div>
-        </div>
-
-        <div class="filter">
-          <h2>Size</h2>
-          <div class="select" id="size-container">
-            <button onclick=filter_size(0) class="active">ALL</button>
-            <button onclick=filter_size(1)>12oz</button>
-            <button onclick=filter_size(2)>16oz</button>
-            <button onclick=filter_size(3)>32oz</button>
-          </div>
-        </div>
-
-        <div class="filter type">
-          <h2>Type</h2>
-          <div class="select" id="filter-coffee-container">
-            <button onclick=filter_coffee_type(0) class="active">ALL</button>
-            <button onclick=filter_coffee_type(1)>Decaffeinated</button>
-            <button onclick=filter_coffee_type(2)>Easy-late</button>
-            <button onclick=filter_coffee_type(3)>Flavored</button>
-            <button onclick=filter_coffee_type(4)>Ground</button>
-            <button onclick=filter_coffee_type(5)>Organic</button>
-            <button onclick=filter_coffee_type(6)>Reserved</button>
-            <button onclick=filter_coffee_type(7)>Seasonal</button>
-            <button onclick=filter_coffee_type(8)>Whole Bean</button>
-          </div>
-        </div>
-
-      </div>
 
       <div class="items">
         <div class="filter-container">
-          <label for="filter-options">Sory By - </label>
+
+          <div class="filter">
+            <label for="filter-options">Roast :</label>
+            <select id="roast-filter">
+              <option value="0">All</option>
+              <option value="1">Light</option>
+              <option value="2">Medium</option>
+              <option value="3">Dark</option>
+            </select>
+          </div>
+
+          <div class="filter">
+            <label for="filter-options">Size :</label>
+            <select id="size-filter">
+              <option value="0">All</option>
+              <option value="1">12oz</option>
+              <option value="2">16oz</option>
+              <option value="3">32oz</option>
+            </select>
+          </div>
+
+          <div class="filter">
+            <label for="filter-options">Type :</label>
+            <select id="coffee-type-filter">
+              <option value="0">All</option>
+              <option value="1">Decaffeinated</option>
+              <option value="2">Easy-late</option>
+              <option value="3">Flavored</option>
+              <option value="4">Ground</option>
+              <option value="5">Organic</option>
+              <option value="6">Reserved</option>
+              <option value="7">Seasonal</option>
+              <option value="8">Whole Bean</option>
+            </select>
+          </div>
+
+          <div class="filter">
+          <label for="filter-options">Sory By :</label>
           <select onchange='filter_options()' id="filter-options" name="filter">
             <option value="featured">Featured</option>
-            <option value="high-to-low">Price - High to Low</option>
-            <option value="low-to-high">Price - Low to High</option>
+            <option value="high-to-low">High to Low</option>
+            <option value="low-to-high">Low to High</option>
           </select>
+          </div>
+
         </div>
 
         <div id="item-container" class="item-container">
