@@ -31,7 +31,7 @@
           {% endif %}
         </a>
 
-        <a class="cart" href="{% url 'cart:cart' username=request.user.username %}">
+        <a class="cart" href="{% url 'cart:my-cart' username=request.user.username %}">
           <img src="{% static 'home/images/shopping-bag.png' %}" >
           
         </a>

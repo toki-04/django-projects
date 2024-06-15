@@ -1,5 +1,6 @@
+let selected_size = ""
 const quantity_counter = document.getElementById("quantity-counter")
-const price = document.getElementById("price")
+let price = document.getElementById("price")
 
 let base_price = price.innerText.replace("$", "").trim()
 function add(){
@@ -41,17 +42,51 @@ children[0].addEventListener("click", function() {
   children[0].className="active"
   children[1].className=""
   children[2].className=""
+
+  selected_size = children[0].innerText
 })
 
 children[1].addEventListener("click", function() {
   children[0].className=""
   children[1].className="active"
   children[2].className=""
+
+
+  selected_size = children[1].innerText
 })
 
 children[2].addEventListener("click", function() {
   children[0].className=""
   children[1].className=""
   children[2].className="active"
+
+
+  selected_size = children[2].innerText
 })
 
+
+api_url = "http://127.0.0.1:8000/cart/add-to-cart"
+function add_to_cart(name, roast, price, image_url, created_by){
+  size = selected_size
+  quantity = quantity_counter.innerText
+
+fetch(api_url, {
+    method: 'POST',
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      "name":name,
+      "roast":roast,
+      "size":size,
+      "quantity":quantity,
+      "price": price,
+      "image_url": image_url,
+      "created_by": created_by, 
+    })
+})
+   .then(response => response.json())
+   .then(response => console.log(JSON.stringify(response)))
+
+}

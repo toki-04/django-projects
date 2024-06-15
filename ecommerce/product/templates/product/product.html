@@ -52,7 +52,19 @@
     </div>
     <div class="btn-container">
       <button class="buy">Buy Now</button>
-      <button class="cart">Add to Cart</button>
+      <form method="post" action="{% url 'cart:add-to-cart' %}">
+        {% csrf_token %}
+        <input type="hidden" name="name" maxlength="100" value={{product.name}}>
+        <input type="hidden" name="roast" value={{product.roast}}>
+        <input type="hidden" name="size" value="12">
+        <input type="hidden" name="quantity" value="2">
+        <input type="hidden" name="price" value={{product.price}}>
+        <input type="hidden" name="image_url" value={{product.image.url}}>
+        <input type="hidden" name="created_by" value={{request.user.id}}>
+
+
+        <button type="submit" class="cart">Add to Cart</button>
+      </form>
     </div>
 
   </div>
