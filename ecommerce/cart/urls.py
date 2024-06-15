@@ -3,5 +3,5 @@ from . import views
 
 app_name = "cart"
 urlpatterns = [
-    path("<int:id>", views.cart, name="cart"),
+    path("<str:username>", views.cart, name="cart"),
 ]

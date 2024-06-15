@@ -50,6 +50,7 @@ nav .right {
   display: flex;
   gap: 16px;
   margin-right: 8px;
+  align-items: center;
 }
 
 nav .right .user {
@@ -58,6 +59,11 @@ nav .right .user {
   align-items: center;
   color: var(--black);
   text-decoration: none;
+}
+
+
+nav .right .cart img {
+  margin-top: 6px;
 }
 
 
