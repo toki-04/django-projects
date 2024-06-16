@@ -108,6 +108,12 @@ header div .user {
   font-weight: 500;
 }
 
+
+.sidebar .navigation a:hover {
+  border-right: 4px solid var(--primary);
+  color: var(--primary);
+}
+
 .sidebar .navigation .selected {
   border-right: 4px solid var(--primary);
   color: var(--primary);

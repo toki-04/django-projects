@@ -10,23 +10,36 @@
     </div>
 
   <div class="navigation">
-    <a href="#">
-      <img src="{% static 'core/images/dashboard.png' %}">
+    <a 
+      onmouseover='nav_mouse_over("dashboard")'
+      onmouseleave='nav_mouse_leave("dashboard")'
+      href="#">
+      <img id="dashboard-icon" src="{% static 'core/images/dashboard.png' %}">
       Dashboard
     </a>
 
-    <a href="#" class="selected">
-      <img src="{% static 'core/images/selected-community.png' %}">
+    <a
+      onmouseover='nav_mouse_over("community")'
+      onmouseleave='nav_mouse_leave("community", true)'
+      href="#"
+      class="selected">
+      <img id="community-icon" src="{% static 'core/images/selected-community.png' %}">
       Community
     </a>
 
-    <a href="#">
-      <img src="{% static 'core/images/bubble-chat.png' %}">
+    <a
+      onmouseover='nav_mouse_over("chat")'
+      onmouseleave='nav_mouse_leave("chat")'
+      'href="#">
+      <img id="chat-icon" src="{% static 'core/images/bubble-chat.png' %}">
       Chat
     </a>
 
-    <a href="#">
-      <img src="{% static 'core/images/setting.png' %}">
+    <a
+      onmouseover='nav_mouse_over("settings")'
+      onmouseleave='nav_mouse_leave("settings")'
+      href="#">
+      <img id="settings-icon" src="{% static 'core/images/settings.png' %}">
       Settings
     </a>
   </div>
@@ -37,3 +50,4 @@
     <span>Create a post</span>
   </div>
 </nav>
+<script src="{% static 'core/script.js' %}"></script>
