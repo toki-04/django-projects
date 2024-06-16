@@ -1,0 +1,61 @@
+.flex-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+
+
+.create-post {
+  max-width: 500px;
+  margin-top: 32px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.create-post .message-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  background-color: var(--bg);
+  border-radius: 8px;
+}
+
+
+.create-post .message-container .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+
+.create-post .message-container textarea {
+  max-width: 408px;
+  min-width: 408px;
+  height: 100px;
+  background-color: var(--bg);
+  outline: none;
+  border: none;
+  margin-top: 4px;
+}
+
+.create-post .image-video-container {
+  display: flex;
+  gap: 32px;
+  color: var(--black);
+}
+
+.create-post .post-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 32px;
+}
