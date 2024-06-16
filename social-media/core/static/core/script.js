@@ -41,7 +41,3 @@ function nav_mouse_leave(img_name, selected=false){
   }
 }
 
-
-function create_post_modal(){
-  return
-}

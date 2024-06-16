@@ -61,6 +61,13 @@
   color: var(--black);
 }
 
+
+.create-post .image-video-container .flex-row {
+  cursor: pointer;
+}
+
+
+
 .create-post .create-post-container {
   display: flex;
   justify-content: space-between;
@@ -68,6 +75,9 @@
 
   margin-top: 32px;
 }
+
+
+
 
 .post-container {
   max-width: 550px;

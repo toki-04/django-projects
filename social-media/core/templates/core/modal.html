@@ -1,0 +1,33 @@
+{% load static %}
+<div id="modal" class="modal">
+  <div class="create-post modal-item">
+    <div class="modal-header">
+      <h3>Create Post</h3>
+      <img onclick='close_modal()' src="{% static 'core/images/close.png' %}">
+    </div>
+    <div class="message-container">
+      <div class="icon-container"><img src="{% static 'home/images/messenger.png' %}"> </div>
+      <textarea placeholder="What's up, Kyle?"></textarea>
+    </div>
+    <div class="create-post-container">
+      <div class="image-video-container">
+        <div class="flex-row">
+          <div class="icon-container"><img src="{% static 'home/images/photo.png' %}"> </div>
+          <span>Image</span>
+        </div>
+        <div class="flex-row">
+          <div class="icon-container"><img src="{% static 'home/images/video.png' %}"> </div>
+          <span>Video</span>
+        </div>
+
+
+      </div>
+
+      <div class="primary-icon-btn">
+        <img src="{% static 'home/images/paper-plane.png' %}">
+        <span>Post</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="{% static 'core/modal.js' %}"></script>
