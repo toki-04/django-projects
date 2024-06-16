@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.content .at {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
 
 .greet p {
   margin-top: 4px;
@@ -103,6 +107,21 @@
 
 
 .post-container .header .dots {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
+}
+
+.post-container .body {
+  margin-top: 8px;
+}
+
+
+.post-container .body p {
+  margin: 16px 0;
+  color: var(--black);
+}
+
+
+.post-container .body .post-img {
+  width: 100%;
 }

@@ -3,7 +3,11 @@
 <link href="{% static 'core/style.css' %}" rel="stylesheet">{% endblock css %}
 <nav class="sidebar">
   <div>
-  <h1>MomoTweets</h1>
+    <div class="title-container">
+      <img src="{% static 'core/images/arona-whale.png' %}">
+      <h1>Welcome to <span>D-Whale</span></h1>
+      <p>(Name subject to change)</p>
+    </div>
 
   <div class="navigation">
     <a href="#">
@@ -12,7 +16,7 @@
     </a>
 
     <a href="#" class="selected">
-      <img src="{% static 'core/images/community.png' %}">
+      <img src="{% static 'core/images/selected-community.png' %}">
       Community
     </a>
 

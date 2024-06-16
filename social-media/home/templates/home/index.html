@@ -1,10 +1,11 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}MomoTweets{% endblock title %}
+{% block title %}D-Whale{% endblock title %}
 {% block css %}<link href="{% static 'home/style.css' %}" rel="stylesheet">{% endblock css %}
 {% block content %}
 
 <section class="content">
+  <h1 class="at">Community</h1>
   <div class="greet">
     <h1>Hello, Kyle!</h1>
     <p>What's new with you? Would you like to share something?</p>
@@ -41,17 +42,18 @@
   <div class="post-container">
     <div class="header">
       <div class="user-info">
-      <img class="user" src="{% static 'core/images/user-icon.jpg' %}">
-      <div>
+        <img class="user" src="{% static 'core/images/user-icon.jpg' %}">
+        <div>
           <h3 class="name">Kyle Pagayon</h3>
           <span class="time">5 mins. ago | Public</span>
-      </div>
-
+        </div>
       </div>
       <img class="dots" src="{% static 'home/images/dots.png' %}">
     </div>
 
     <div class="body">
+      <p>Take a look at my portfolio!</p>
+      <img class="post-img" src="{% static 'home/images/personal-blog.png' %}">
     </div>
 
     <div class="header">
