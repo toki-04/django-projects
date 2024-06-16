@@ -1,0 +1,35 @@
+{% load static %}
+{% block css %}
+<link href="{% static 'core/style.css' %}" rel="stylesheet">{% endblock css %}
+<nav class="sidebar">
+  <div>
+  <h1>MomoTweets</h1>
+
+  <div class="navigation">
+    <a href="#">
+      <img src="{% static 'core/images/dashboard.png' %}">
+      Dashboard
+    </a>
+
+    <a href="#" class="selected">
+      <img src="{% static 'core/images/community.png' %}">
+      Community
+    </a>
+
+    <a href="#">
+      <img src="{% static 'core/images/bubble-chat.png' %}">
+      Chat
+    </a>
+
+    <a href="#">
+      <img src="{% static 'core/images/setting.png' %}">
+      Settings
+    </a>
+  </div>
+  </div>
+
+  <div class="primary-icon-btn">
+    <img src="{% static 'home/images/paper-plane.png' %}">
+    <span>Create a post</span>
+  </div>
+</nav>

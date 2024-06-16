@@ -5,9 +5,13 @@
 }
 
 
+.greet p {
+  margin-top: 4px;
+
+}
 
 .create-post {
-  max-width: 500px;
+  max-width: 550px;
   margin-top: 32px;
   padding: 24px;
   background-color: white;
@@ -37,9 +41,10 @@
 
 
 .create-post .message-container textarea {
-  max-width: 408px;
-  min-width: 408px;
-  height: 100px;
+  min-width: 458px;
+  max-width: 458px;
+
+  min-height: 100px;
   background-color: var(--bg);
   outline: none;
   border: none;
@@ -52,10 +57,52 @@
   color: var(--black);
 }
 
-.create-post .post-container {
+.create-post .create-post-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin-top: 32px;
+}
+
+.post-container {
+  max-width: 550px;
+  margin-top: 8px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.post-container .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.post-container .header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.post-container .header .user-info .name {
+  font-size: 1rem;
+}
+
+.post-container .header .user-info .time {
+  font-size: 0.9rem;
+  color: var(--paragraph);
+}
+
+.post-container .header .user {
+  width: 42px;
+  height: 42px;
+  border-radius: 100px;
+}
+
+
+.post-container .header .dots {
+  width: 24px;
+  height: 24px;
 }

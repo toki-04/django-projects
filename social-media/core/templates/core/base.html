@@ -10,11 +10,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
   {% block css %}{% endblock css %}
 </head>
 
 <body>
-  {% block content %}{% endblock content %}
+  {% include 'core/sidebar.html' %}
+  <section>
+    <header>
+      <div><img src="{% static 'core/images/search.png' %}"></div>
+      <div><img src="{% static 'core/images/bell.png' %}"></div>
+      <div><img class="user" src="{% static 'core/images/user-icon.jpg' %}"></div>
+    </header>
+    {% block content %}{% endblock content %}
+  </section>
 </body>
 
 {% block script %}{% endblock script %}
