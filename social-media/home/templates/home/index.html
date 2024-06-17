@@ -1,62 +1,21 @@
-{% extends 'core/base.html' %}
-{% load static %}
-{% block title %}D-Whale{% endblock title %}
-{% block css %}<link href="{% static 'home/style.css' %}" rel="stylesheet">{% endblock css %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load static %}
+  <title>D-Whale</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'core/images/favicon.ico' %}">
+  <link href="{% static 'home/style.css' %}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
 
-<section class="content">
-  <h1 class="at">Community</h1>
-  <div class="greet">
-    <h1>Hello, Kyle!</h1>
-    <p>What's new with you? Would you like to share something?</p>
-  </div>
+<body>
+    <section>
+      <h1>Welcome To D-Whale</h1>
+    </section>
 
-
-  <div class="create-post">
-    <h3>Create Post</h3>
-    <div class="message-container">
-      <div class="icon-container"><img src="{% static 'home/images/messenger.png' %}"> </div>
-      <textarea placeholder="What's up, Kyle?"></textarea>
-    </div>
-    <div class="create-post-container">
-      <div class="image-video-container">
-        <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'home/images/photo.png' %}"> </div>
-          <span>Image</span>
-        </div>
-        <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'home/images/video.png' %}"> </div>
-          <span>Video</span>
-        </div>
-
-
-      </div>
-
-      <div class="primary-icon-btn">
-        <img src="{% static 'home/images/paper-plane.png' %}">
-        <span>Post</span>
-      </div>
-    </div>
-  </div>
-
-  <div class="post-container">
-    <div class="header">
-      <div class="user-info">
-        <img class="user" src="{% static 'core/images/user-icon.jpg' %}">
-        <div>
-          <h3 class="name">Kyle Pagayon</h3>
-          <span class="time">5 mins. ago | Public</span>
-        </div>
-      </div>
-      <img class="dots" src="{% static 'home/images/dots.png' %}">
-    </div>
-
-    <div class="body">
-      <p>Take a look at my portfolio!</p>
-      <img class="post-img" src="{% static 'home/images/personal-blog.png' %}">
-    </div>
-
-  </div>
-
-</section>
-{% endblock content %}
+</body>
+</html>

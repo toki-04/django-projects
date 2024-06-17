@@ -1,0 +1,137 @@
+.flex-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.content .at {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.greet p {
+  margin-top: 4px;
+
+}
+
+.create-post {
+  max-width: 550px;
+  margin-top: 32px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.create-post .message-container {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  background-color: var(--bg);
+  border-radius: 8px;
+}
+
+
+.create-post .message-container .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+
+.create-post .message-container textarea {
+  min-width: 458px;
+  max-width: 458px;
+
+  min-height: 100px;
+  background-color: var(--bg);
+  outline: none;
+  border: none;
+  margin-top: 4px;
+}
+
+.create-post .image-video-container {
+  display: flex;
+  gap: 32px;
+  color: var(--black);
+}
+
+
+.create-post .image-video-container .flex-row {
+  cursor: pointer;
+}
+
+
+
+.create-post .create-post-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 32px;
+}
+
+
+
+
+.post-container {
+  max-width: 550px;
+  margin-top: 8px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.post-container .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.post-container .header .user-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.post-container .header .user-info .name {
+  font-size: 1rem;
+}
+
+.post-container .header .user-info .time {
+  font-size: 0.9rem;
+  color: var(--paragraph);
+}
+
+.post-container .header .user {
+  width: 42px;
+  height: 42px;
+  border-radius: 100px;
+}
+
+
+.post-container .header .dots {
+  width: 16px;
+  height: 16px;
+}
+
+.post-container .body {
+  margin-top: 8px;
+}
+
+
+.post-container .body p {
+  margin: 16px 0;
+  color: var(--black);
+}
+
+
+.post-container .body .post-img {
+  width: 100%;
+}
