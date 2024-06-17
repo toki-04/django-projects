@@ -1,137 +1,83 @@
-.flex-row {
-  display: flex;
-  gap: 16px;
-  align-items: center;
+:root {
+  --primary: #25FFF5;
+  --secondary: #0CB3DD;
+  --paragraph: #868e96;
+  --bg: #f1f3f5;
+  --black: #132029;
+  --grey: #B8BDC3;
 }
 
-.content .at {
-  font-size: 2rem;
-  margin-bottom: 32px;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
-.greet p {
-  margin-top: 4px;
-
-}
-
-.create-post {
-  max-width: 550px;
-  margin-top: 32px;
-  padding: 24px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.create-post .message-container {
-  display: flex;
-  gap: 16px;
-  margin-top: 16px;
-  padding: 16px;
-  background-color: var(--bg);
-  border-radius: 8px;
-}
-
-
-.create-post .message-container .icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  padding: 8px;
-  border-radius: 8px;
-  width: 32px;
-  height: 32px;
-}
-
-
-.create-post .message-container textarea {
-  min-width: 458px;
-  max-width: 458px;
-
-  min-height: 100px;
-  background-color: var(--bg);
-  outline: none;
-  border: none;
-  margin-top: 4px;
-}
-
-.create-post .image-video-container {
-  display: flex;
-  gap: 32px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--black);
 }
 
-
-.create-post .image-video-container .flex-row {
-  cursor: pointer;
-}
-
-
-
-.create-post .create-post-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-top: 32px;
-}
-
-
-
-
-.post-container {
-  max-width: 550px;
-  margin-top: 8px;
-  padding: 24px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.post-container .header {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.post-container .header .user-info {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-
-.post-container .header .user-info .name {
-  font-size: 1rem;
-}
-
-.post-container .header .user-info .time {
-  font-size: 0.9rem;
+p {
   color: var(--paragraph);
 }
 
-.post-container .header .user {
-  width: 42px;
-  height: 42px;
-  border-radius: 100px;
+body {
+  display: flex;
+  justify-content: center;
+  background-color: white;
 }
 
-
-.post-container .header .dots {
-  width: 16px;
-  height: 16px;
+body section {
+  margin-top: 50px;
+  text-align: center;
 }
 
-.post-container .body {
+body section h1 {
   margin-top: 8px;
+  font-size: 3.5rem;
 }
 
 
-.post-container .body p {
-  margin: 16px 0;
+body section h1 span {
+  color: var(--primary);
+}
+
+
+body section p {
+  font-size: 1.4rem;
+  max-width: 500px;
+  margin: 4px auto;
   color: var(--black);
 }
 
 
-.post-container .body .post-img {
-  width: 100%;
+body section .login-signup-container {
+  margin-top: 32px;
+}
+
+
+body section .login-signup-container a {
+  display: inline-block;
+  width: 110px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 0;
+  border-radius: 4px;
+  font-size: 1.2rem;
+}
+
+
+body section .login-signup-container .login {
+  background-color: var(--primary);
+  margin-right: 16px;
+}
+
+body section .login-signup-container .signup {
+  background-color: var(--secondary);
 }
