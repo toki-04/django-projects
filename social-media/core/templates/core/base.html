@@ -22,7 +22,7 @@
     <header>
       <div><img src="{% static 'core/images/search.png' %}"></div>
       <div><img src="{% static 'core/images/bell.png' %}"></div>
-      <div><img class="user" src="{% static 'core/images/user-icon.jpg' %}"></div>
+        <a href="{% url 'authentication:logout' %}"><img class="user" src="{% static 'core/images/user-icon.jpg' %}"></a>
     </header>
     {% block content %}{% endblock content %}
   </section>
