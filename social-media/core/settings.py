@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "core",
     "home",
     "community",
+    "authentication",
 ]
 
 MIDDLEWARE = [

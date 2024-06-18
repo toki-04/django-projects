@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D-Whale - Signup</title>
+  {% load static %}
+  <link rel="icon" type="image/x-icon" href="{% static 'core/images/favicon.ico' %}">
+  <link href="{% static 'authentication/style.css' %}" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <section>
+    <div class="left">
+      <img src="{% static 'core/images/arona-whale.png' %}">
+      <h1>Welcome To <span>D-Whale</span></h1>
+      <p>Hang out anytime, anywhere <span>D-Whale</span>
+        makes it easy and fun to stay close yo
+        your favorite people.</p>
+    </div>
+
+    <div class="right">
+      <form method="post">
+        <h1>Signup</h1>
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="primary-btn" type="submit">Login</button>
+      </form>
+
+      <div class="here">
+        <span>Already have an account click <a href="{% url 'authentication:login' %}">here</a></span>
+      </div>
+    </div>
+
+
+  </section>
+</body>
+
+</html>
