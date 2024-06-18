@@ -81,7 +81,7 @@
 
 .post-container {
   max-width: 550px;
-  margin-top: 8px;
+  margin: 8px 0;
   padding: 24px;
   background-color: white;
   border-radius: 8px;
@@ -134,4 +134,25 @@
 
 .post-container .body .post-img {
   width: 100%;
+}
+
+.post-container .footer {
+  margin-top: 16px;
+  display: flex;
+  gap: 24px;
+}
+
+.post-container .footer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: .9rem;
+  color: var(--paragraph);
+  font-weight: 500;
+}
+
+
+.post-container .footer div img {
+  margin-top: 2px;
 }
