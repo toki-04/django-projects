@@ -1,0 +1,39 @@
+{% load static %}
+{% for post in posts %}
+<div class="post-container">
+  <div class="header">
+    <div class="user-info">
+      <img class="user" src="{% static 'core/images/user-icon.jpg' %}">
+      <div>
+        <h3 class="name">{{post.user.username}}</h3>
+        <span class="time">{{post.date_created}} | {{post.visibility}}</span>
+      </div>
+    </div>
+    <img class="dots" src="{% static 'core/images/dots.png' %}">
+  </div>
+
+  <div class="body">
+    <p>{{post.text}}</p>
+    {% if post.image.url != "" %}
+    <img class="post-img" src={{post.image.url}}>
+    {% endif %}
+  </div>
+
+  <div class="footer">
+    <div>
+      <img id="like" src="{% static 'core/images/heart-filled.png' %}">
+      {{post.likes}} Likes
+    </div>
+
+    <div>
+      <img id="comment" src="{% static 'core/images/comment.png' %}">
+      {{post.comments}} Comments
+    </div>
+
+    <div>
+      <img id="share" src="{% static 'core/images/share.png' %}">
+      {{post.shares}} Share
+    </div>
+  </div>
+</div>
+{% endfor %}

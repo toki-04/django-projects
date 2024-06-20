@@ -29,8 +29,6 @@
           <div class="icon-container"><img src="{% static 'core/images/video.png' %}"> </div>
           <span>Video</span>
         </div>
-
-
       </div>
 
       <div class="primary-icon-btn">
@@ -40,41 +38,6 @@
     </div>
   </div>
 
-  <div class="post-container">
-    <div class="header">
-      <div class="user-info">
-        <img class="user" src="{% static 'core/images/user-icon.jpg' %}">
-        <div>
-          <h3 class="name">Kyle Pagayon</h3>
-          <span class="time">5 mins. ago | Public</span>
-        </div>
-      </div>
-      <img class="dots" src="{% static 'core/images/dots.png' %}">
-    </div>
-
-    <div class="body">
-      <p>Take a look at my portfolio!</p>
-      <img class="post-img" src="{% static 'core/images/personal-blog.png' %}">
-    </div>
-
-    <div class="footer">
-      <div>
-        <img id="like" src="{% static 'core/images/heart-filled.png' %}">
-        10 Likes
-      </div>
-
-      <div>
-        <img id="comment" src="{% static 'core/images/comment.png' %}">
-        10 Comments
-      </div>
-
-      <div>
-        <img id="share" src="{% static 'core/images/share.png' %}">
-        Share
-      </div>
-    </div>
-
-  </div>
-
+  {% include 'community/posts.html' %}
 </section>
 {% endblock content %}
