@@ -13,17 +13,22 @@
   </div>
 
 
-  <div class="create-post">
+  <form class="create-post" method="post" action="{% url 'community:create_post' %}" enctype="multipart/form-data">
+    {% csrf_token %}
     <h3>Create Post</h3>
     <div class="message-container">
       <div class="icon-container"><img src="{% static 'core/images/messenger.png' %}"> </div>
-      <textarea placeholder="What's up, {{request.user.username}}?"></textarea>
+      <textarea name="text" placeholder="What's up, {{request.user.username}}?"></textarea>
+    </div>
+    <div>
+      <img id="preview-img" src="{% static 'core/images/personal-blog.png' %}">
     </div>
     <div class="create-post-container">
       <div class="image-video-container">
         <div class="flex-row">
           <div class="icon-container"><img src="{% static 'core/images/photo.png' %}"> </div>
-          <span>Image</span>
+          <label for="upload-image">Image</label>
+          <input type="file" onchange='preview_image()' id="upload-image" name="image" style="display:none">
         </div>
         <div class="flex-row">
           <div class="icon-container"><img src="{% static 'core/images/video.png' %}"> </div>
@@ -31,13 +36,19 @@
         </div>
       </div>
 
-      <div class="primary-icon-btn">
+      <input type="none" name="user" value={{user.id}} style="display:none">
+
+      <button class="primary-icon-btn" type="submit">
         <img src="{% static 'core/images/paper-plane.png' %}">
         <span>Post</span>
-      </div>
+      </button>
     </div>
-  </div>
+  </form>
 
   {% include 'community/posts.html' %}
 </section>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'community/script.js' %}"></script>
+{% endblock script %}

@@ -162,3 +162,12 @@
 .post-container .footer div img {
   margin-top: 2px;
 }
+
+#preview-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  margin: 8px 0;
+  display: none;
+
+}
