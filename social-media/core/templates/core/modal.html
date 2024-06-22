@@ -7,27 +7,35 @@
     </div>
     <div class="message-container">
       <div class="icon-container"><img src="{% static 'core/images/messenger.png' %}"> </div>
-      <textarea placeholder="What's up, Kyle?"></textarea>
+      <textarea name="text" placeholder="What's up, {{request.user.username}}?"></textarea>
+    </div>
+    <div>
+      <img id="modal-preview-img">
     </div>
     <div class="create-post-container">
       <div class="image-video-container">
         <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'core/images/photo.png' %}"> </div>
-          <span>Image</span>
+          <label for="modal-upload-image" class="label-icon-container pointer">
+            <img src="{% static 'core/images/photo.png' %}">
+            <span>Image</span>
+            <input type="file" onchange='modal_preview_image()' id="modal-upload-image" name="image" style="display:none">
+          </label>
         </div>
         <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'core/images/video.png' %}"> </div>
-          <span>Video</span>
+          <label class="label-icon-container">
+            <img src="{% static 'core/images/video.png' %}"> 
+            <span>Video</span>
+          </label>
         </div>
-
-
       </div>
 
-      <div class="primary-icon-btn">
+      <input type="none" name="user" value={{user.id}} style="display:none">
+
+      <button class="primary-icon-btn" type="submit">
         <img src="{% static 'core/images/paper-plane.png' %}">
         <span>Post</span>
-      </div>
+      </button>
     </div>
-  </div>
+
 </div>
 <script src="{% static 'core/modal.js' %}"></script>

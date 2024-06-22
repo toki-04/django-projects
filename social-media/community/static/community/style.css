@@ -171,3 +171,11 @@
   display: none;
 
 }
+
+.label-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}

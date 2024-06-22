@@ -21,18 +21,22 @@
       <textarea name="text" placeholder="What's up, {{request.user.username}}?"></textarea>
     </div>
     <div>
-      <img id="preview-img" src="{% static 'core/images/personal-blog.png' %}">
+      <img id="preview-img">
     </div>
     <div class="create-post-container">
       <div class="image-video-container">
         <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'core/images/photo.png' %}"> </div>
-          <label for="upload-image">Image</label>
-          <input type="file" onchange='preview_image()' id="upload-image" name="image" style="display:none">
+          <label for="upload-image" class="label-icon-container pointer">
+            <img src="{% static 'core/images/photo.png' %}">
+            <span>Image</span>
+            <input type="file" onchange='preview_image()' id="upload-image" name="image" style="display:none">
+          </label>
         </div>
         <div class="flex-row">
-          <div class="icon-container"><img src="{% static 'core/images/video.png' %}"> </div>
-          <span>Video</span>
+          <label class="label-icon-container">
+            <img src="{% static 'core/images/video.png' %}"> 
+            <span>Video</span>
+          </label>
         </div>
       </div>
 
