@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "home",
     "community",
     "user_profile",
+    "dashboard",
     "authentication",
 ]
 
