@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import SignupForm, LoginForm
+from user_profile.models import Profile
 # Create your views here.
 
 
@@ -14,6 +15,7 @@ def login_view(request):
 
             if user:
                 login(request, user)
+
                 return redirect("community:community")
 
     else:
@@ -31,7 +33,18 @@ def signup_view(request):
         form = SignupForm(request.POST)
         if form.is_valid:
             form.save()
-            return redirect("authentication:login")
+
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password1"]
+            user = authenticate(request, username=username, password=password)
+
+            if user:
+                login(request, user)
+                profile = Profile(user=user)
+                profile.save()
+
+                return redirect("community:community")
+
     else:
         form = SignupForm()
 

@@ -22,7 +22,13 @@
     <header>
       <div><img src="{% static 'core/images/search.png' %}"></div>
       <div><img src="{% static 'core/images/bell.png' %}"></div>
-        <a href="{% url 'authentication:logout' %}"><img class="user" src="{% static 'core/images/user-icon.jpg' %}"></a>
+        <a href="{% url 'authentication:logout' %}">
+          {% if profile.profile.url != "" %}
+          <img class="user" src="{{profile.profile.url}}">
+          {% else %}
+            <img class="user" src="{% static 'core/images/user-icon.png' %}">
+          {% endif %}
+        </a>
     </header>
     {% block content %}{% endblock content %}
   </section>

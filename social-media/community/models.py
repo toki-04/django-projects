@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from user_profile.models import Profile
 import json
 
 # Create your models here.
@@ -12,7 +13,7 @@ VISIBILITY_CHOICE = (
 
 
 class Post(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     visibility = models.CharField(choices=VISIBILITY_CHOICE, max_length=10)
     date_created = models.DateTimeField(auto_now_add=True)
     text = models.CharField(max_length=3000)
@@ -28,4 +29,4 @@ class Post(models.Model):
         self.comments = json.dumps(x)
 
     def __str__(self):
-        return f"{self.user.username} {self.date_created}"
+        return f"{self.profile.user.username} {self.date_created}"
