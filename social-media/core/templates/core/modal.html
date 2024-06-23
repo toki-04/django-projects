@@ -1,6 +1,8 @@
 {% load static %}
 <div id="modal" class="modal">
-  <div class="create-post modal-item">
+  <form
+    class="create-post modal-item" method="post" action="{% url 'community:create_post' %}" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="modal-header">
       <h3>Create Post</h3>
       <img onclick='close_modal()' src="{% static 'core/images/close.png' %}">
@@ -36,6 +38,7 @@
         <span>Post</span>
       </button>
     </div>
+  </form>
 
 </div>
 <script src="{% static 'core/modal.js' %}"></script>
