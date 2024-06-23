@@ -3,6 +3,8 @@ from .models import Post
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
+from datetime import datetime
+
 
 # Create your views here.
 
@@ -26,7 +28,13 @@ def create_post(request):
         visibility = "public"
         text = data["text"]
         if request.FILES["image"]:
+            date_now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             image = request.FILES["image"]
+            image.name = date_now+image.name
+
+            print("*"*20)
+            print(image)
+            print("*"*20)
         else:
             image = ""
 
