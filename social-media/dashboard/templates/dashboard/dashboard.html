@@ -4,8 +4,28 @@
 {% block css %}
 <link href="{% static 'dashboard/style.css' %}" rel="stylesheet">{% endblock css %}
 {% block content %}
-<section>
-  <h1>Dashboard</h1>
+<section class="dashboard">
+  <h1 class="at">Dashboard</h1>
+  <div>
+    <div class="user">
+      {% if profile.profile.url != "" %}
+        <img src={{profile.profile.url}}>
+      {% else %}
+      <img src={% static 'core/images/user-icon.png' %}>
+      {% endif %}
+      <div>
+        <h1 class="name">{{profile.user.username}}</h1>
+        <p class="about-me">I want to eat tofu!</p>
+      </div>
+
+      <div class="followers-post-container">
+        <h1>Followers 10</h1>
+        <h1>Posts 15</h1>
+      </div>
+    </div>
+
+    
+  </div>
 
 </section>
 {% endblock content %}

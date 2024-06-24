@@ -1,0 +1,46 @@
+.dashboard {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+
+
+.dashboard .user {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  background-color: white;
+  padding: 16px 24px;
+  border-radius: 4px;
+
+}
+
+.dashboard .user img {
+  width: 128px;
+  height: 128px;
+  border-radius: 1000px;
+  object-fit: cover;
+}
+
+.dashboard .user .name {
+  margin-top: 16px;
+  font-size: 2rem;
+}
+
+.dashboard .user .about-me {
+  margin-top: 4px;
+  font-size: 1.1rem;
+}
+
+.dashboard .followers-post-container {
+  display: flex;
+  gap: 16px;
+  margin-left: auto;
+  margin-top: 24px;
+}
+
+
+.dashboard .followers-post-container h1 {
+  color: var(--paragraph);
+  font-weight: 500;
+}
