@@ -24,30 +24,29 @@ function nav_mouse_over(img_name){
   }
 }
 
-function nav_mouse_leave(img_name, selected=false){
-  if (selected === true){
-    return
-  }
+function nav_mouse_leave(img_name){
+  const url = document.URL
+  const current_url = url.split("/")[3]
 
-  if (img_name === "dashboard"){
+  if (img_name === "dashboard" && current_url !== "dashboard"){
     dashboard_icon.src="/static/core/images/dashboard.png"
   }
 
-  else if (img_name === "community"){
+  else if (img_name === "community" && current_url !== "community"){
     community_icon.src="/static/core/images/community.png"
   }
 
-  else if (img_name === "chat"){
+  else if (img_name === "chat" && current_url !== "chat"){
     chat_icon.src="/static/core/images/bubble-chat.png"
   }
-  else if (img_name === "settings"){
+  else if (img_name === "settings" && current_url !== "settings"){
     settings_icon.src="/static/core/images/settings.png"
   }
 }
 
 function current_url_highlight(){
   const url = document.URL
-  current_url = url.split("/")[3]
+  const current_url = url.split("/")[3]
 
   if (current_url === "dashboard"){
     dashboard.className = "selected"
