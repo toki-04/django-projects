@@ -1,3 +1,7 @@
+const dashboard = document.getElementById("dashboard")
+const community = document.getElementById("community")
+const chat = document.getElementById("chat")
+const settings = document.getElementById("settings")
 
 const dashboard_icon = document.getElementById("dashboard-icon")
 const community_icon = document.getElementById("community-icon")
@@ -40,4 +44,68 @@ function nav_mouse_leave(img_name, selected=false){
     settings_icon.src="/static/core/images/settings.png"
   }
 }
+
+function current_url_highlight(){
+  const url = document.URL
+  current_url = url.split("/")[3]
+
+  if (current_url === "dashboard"){
+    dashboard.className = "selected"
+    community.className = ""
+    chat.className = ""
+    settings.className = ""
+
+
+    dashboard_icon.src="/static/core/images/selected-dashboard.png"
+    community_icon.src="/static/core/images/community.png"
+    chat_icon.src="/static/core/images/bubble-chat.png"
+    settings_icon.src="/static/core/images/settings.png"
+  }
+
+  else if (current_url === "community"){
+    dashboard.className = ""
+    community.className = "selected"
+    chat.className = ""
+    settings.className = ""
+
+
+    dashboard_icon.src="/static/core/images/dashboard.png"
+    community_icon.src="/static/core/images/selected-community.png"
+    chat_icon.src="/static/core/images/bubble-chat.png"
+    settings_icon.src="/static/core/images/settings.png"
+  }
+
+  else if (current_url === "chat"){
+    dashboard.className = ""
+    community.className = ""
+    chat.className = "chat"
+    settings.className = ""
+
+
+    dashboard_icon.src="/static/core/images/dashboard.png"
+    community_icon.src="/static/core/images/community.png"
+    chat_icon.src="/static/core/images/selected-bubble-chat.png"
+    settings_icon.src="/static/core/images/settings.png"
+  }
+
+  else if (current_url === "settings"){
+    dashboard.className = ""
+    community.className = ""
+    chat.className = "settings"
+    settings.className = ""
+
+
+    dashboard_icon.src="/static/core/images/dashboard.png"
+    community_icon.src="/static/core/images/community.png"
+    chat_icon.src="/static/core/images/bubble-chat.png"
+    settings_icon.src="/static/core/images/selected-settings.png"
+  }
+
+
+}
+
+current_url_highlight()
+
+
+
 

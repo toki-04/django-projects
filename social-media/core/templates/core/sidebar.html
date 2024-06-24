@@ -11,31 +11,34 @@
 
   <div class="navigation">
     <a 
+      id="dashboard"
       onmouseover='nav_mouse_over("dashboard")'
       onmouseleave='nav_mouse_leave("dashboard")'
-      href="#">
+      href="{% url 'dashboard:dashboard' %}">
       <img id="dashboard-icon" src="{% static 'core/images/dashboard.png' %}">
       Dashboard
     </a>
 
     <a
+      id="community"
       onmouseover='nav_mouse_over("community")'
       onmouseleave='nav_mouse_leave("community", true)'
-      href="#"
-      class="selected">
+      href="{% url 'community:community' %}">
       <img id="community-icon" src="{% static 'core/images/selected-community.png' %}">
       Community
     </a>
 
     <a
+      id="chat"
       onmouseover='nav_mouse_over("chat")'
       onmouseleave='nav_mouse_leave("chat")'
-      'href="#">
+      href="#">
       <img id="chat-icon" src="{% static 'core/images/bubble-chat.png' %}">
       Chat
     </a>
 
     <a
+      id="settings"
       onmouseover='nav_mouse_over("settings")'
       onmouseleave='nav_mouse_leave("settings")'
       href="#">
