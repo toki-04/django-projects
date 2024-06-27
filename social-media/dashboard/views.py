@@ -15,3 +15,13 @@ def dashboard(request):
         "profile": profile
     }
     return render(request, "dashboard/dashboard.html", context)
+
+# TODO: do this after you finish the community todo
+
+
+def change_profile(request):
+    pass
+
+
+def change_about_me(request):
+    pass
