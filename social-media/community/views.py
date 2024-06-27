@@ -56,3 +56,17 @@ def create_post(request):
             post.save()
 
             return redirect("community:community")
+
+# TODO: Please build this tomorrow haha
+
+
+def like_post(request):
+    pass
+
+
+def comment_post(request):
+    pass
+
+
+def share_post(request):
+    pass

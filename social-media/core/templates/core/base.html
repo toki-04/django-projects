@@ -22,7 +22,7 @@
     <header>
       <div><img src="{% static 'core/images/search.png' %}"></div>
       <div><img src="{% static 'core/images/bell.png' %}"></div>
-        <a href="{% url 'authentication:logout' %}">
+        <a href="{% url 'dashboard:dashboard' %}">
           {% if profile.profile.url != "" %}
           <img class="user" src="{{profile.profile.url}}">
           {% else %}
