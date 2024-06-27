@@ -15,17 +15,23 @@
       {% endif %}
       <div>
         <h1 class="name">{{profile.user.username}}</h1>
-        <p class="about-me">I want to eat tofu!</p>
+        <p class="about-me">{{profile.about_me}}</p>
       </div>
 
       <div class="followers-post-container">
-        <h1>Followers 10</h1>
-        <h1>Posts 15</h1>
+        <h1>Followers {{profile.followers|length}}</h1>
+        <h1>Posts 0</h1>
       </div>
-    </div>
 
-    
+
+    </div>
   </div>
+
+
+  <div class="logout">
+    <a href="{% url 'authentication:logout' %}">Logout</a>
+  </div>
+
 
 </section>
 {% endblock content %}

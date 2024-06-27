@@ -44,3 +44,19 @@
   color: var(--paragraph);
   font-weight: 500;
 }
+
+.logout {
+  padding: 16px;
+  background-color: var(--primary);
+  border-radius: 4px;
+  margin-top: 32px;
+
+  text-align: center;
+  cursor: pointer;
+}
+
+.logout a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
