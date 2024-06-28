@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "user_profile",
     "dashboard",
     "authentication",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [

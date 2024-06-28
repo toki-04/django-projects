@@ -26,6 +26,9 @@ urlpatterns = [
     path("dashboard/", include("dashboard.urls")),
     path("community/", include("community.urls")),
     path("", include("authentication.urls")),
+
+    path("api/", include('core.api.urls')),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
