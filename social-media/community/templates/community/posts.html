@@ -26,8 +26,10 @@
 
   <div class="footer">
     <div>
-      <img id="like" src="{% static 'core/images/heart.png' %}">
-      {{post.likes}} Likes
+      <form method="POST" id="like-form" onclick='like_post()'>
+        <img id="likes-img" src="{% static 'core/images/heart.png' %}">
+      </form>
+      <p id="likes">{{post.likes}}</p><p>Likes</p>
     </div>
 
     <div>
@@ -42,3 +44,7 @@
   </div>
 </div>
 {% endfor %}
+
+{% block script %}
+<script src="{% static 'community/posts.js' %}"></script>
+{% endblock script %}

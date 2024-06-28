@@ -4,6 +4,8 @@ from user_profile.models import Profile
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 
+from django.http import JsonResponse
+
 from datetime import datetime
 
 
@@ -61,7 +63,8 @@ def create_post(request):
 
 
 def like_post(request):
-    pass
+    if request.method == "POST":
+        return JsonResponse({"status": "ok"})
 
 
 def comment_post(request):

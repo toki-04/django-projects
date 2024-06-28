@@ -7,3 +7,5 @@ function preview_image(){
   preview_img.src = URL.createObjectURL(file)
   preview_img.style.display = "block"
 }
+
+
